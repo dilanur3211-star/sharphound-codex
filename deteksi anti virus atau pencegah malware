@@ -1,0 +1,20 @@
+buka di cmd server
+tasklist /v
+
+Parameter /v (Verbose) digunakan agar Windows menampilkan daftar semua program yang sedang berjalan secara detail, termasuk nama user yang menyalakannya.
+
+S kemudian membaca daftar tersebut dengan sangat teliti di Notepad untuk mencari "kata kunci" software keamanan canggih.
+
+Kalau di dalam daftar itu muncul nama-nama seperti Logstash, filebeat, wazuh-agent.exe, splunknf.exe, atau CyveraService (Palo Alto Cortex), si hacker langsung membatin: "Waduh, gawat! Pabrik ini pakai SIEM/EDR canggih, gua harus super hati-hati!" wkwkwk.
+
+Tapi kalau isinya cuma proses standar Windows seperti explorer.exe, taskhostw.exe, dan MsMpEng.exe (Windows Defender bawaan), si hacker bakal bernapas lega.
+
+
+
+2. Mengecek Layaran Sistem yang Aktif (sc query)
+Kadang software keamanan sengaja menyembunyikan aplikasinya dari daftar tasklist biar gak gampang dimatikan. Untuk menyiasatinya, si hacker akan mengecek langsung ke daftar layanan (Services) Windows dengan mengetik:
+
+DOS
+sc query type= service state= all
+Perintah ini akan membongkar semua layanan yang tertanam di Windows, baik yang sedang berjalan maupun yang sedang mati. Hacker pro sudah hapal di luar kepala nama-nama layanan pertahanan siber. Kalau mereka melihat layanan dari brand-brand besar seperti
+CrowdStrike (CSFalcon), Carbon Black, atau SentinelOne, itu adalah sinyal merah maut untuk mundur wkwkwk.
