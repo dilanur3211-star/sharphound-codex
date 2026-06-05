@@ -1,1 +1,3 @@
 mengetik powershell untuk membuka mode PowerShell.
+copy sharphound ps 1 lalu enter
+Invoke-BloodHound -CollectionMethod DCOnly enter
