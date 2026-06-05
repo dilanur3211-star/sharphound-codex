@@ -1,2 +1,1 @@
-cmd akses powershell
-powershell -ExecutionPolicy Bypass -Command "Import-Module .\SharpHound.ps1; Invoke-BloodHound -CollectionMethod DCOnly"
+mengetik powershell untuk membuka mode PowerShell.
